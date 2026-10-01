@@ -2,17 +2,30 @@
 
 int main(void)
 {
-    int num;
-    int i;
-    int sum = 0;
+    int a,b;
+    char op;
 
-    printf("input a number:");
-    scanf("%d", &num);
+    printf("enter the calculation : ");
+    scanf("%d %c %d", &a, &op, &b);
 
-    for ( i = 1; i <= num; i++ )
-    sum+=i;
-
-    printf("The result is %d \n", sum);
-
-    return 0;
+    switch(op)
+    {
+        case '+':
+            printf("%d + %d = %d\n", a, b, a+b);
+            break;
+        case '-':
+            printf("%d - %d = %d\n", a, b, a-b);
+            break;
+        case '*':
+            printf("%d * %d = %d\n", a, b, a*b);
+            break;
+        case '/':
+            if(b != 0)
+                printf("%d / %d = %f\n", a, b, (float)a/b);
+            else
+                printf("지원하지 않는 연산자입니다.\n");
+            break;
+        default:
+            printf("지원하지 않는 연산자입니다.\n");
+    }
 }
