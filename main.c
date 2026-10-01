@@ -2,19 +2,19 @@
 
 int main(void)
 {
-    int a;
+    char c;
+    int num = 0;
 
-    printf("정수 하나를 입력하시오. :");
-    scanf("%d", &a);
+    printf("input a string:");
 
-    if (a >= 0)
+    while( (c = getchar()) != '\n')
     {
-        printf("절댓값은 %d 입니다.\n", a);
-    }
-    else
-    {
-        printf("절댓값은 %d 입니다.\n", -a);
+        if (c >= '0' && c <= '9')
+        {
+            num++;
+        }
     }
 
-    return 0;
+    printf("The number of digits is %d\n", num);
+    
 }
