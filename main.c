@@ -4,20 +4,16 @@ int main(void)
 {
     int a;
 
-    printf("Enter a number: ");
+    printf("정수 하나를 입력하시오. :");
     scanf("%d", &a);
 
-    if (a > 0)
+    if (a >= 0)
     {
-        printf("양수입니다.\n");
-    }
-    else if(a < 0)
-    {
-        printf("음수입니다.\n");
+        printf("절댓값은 %d 입니다.\n", a);
     }
     else
     {
-        printf("0 입니다.\n");
+        printf("절댓값은 %d 입니다.\n", -a);
     }
 
     return 0;
